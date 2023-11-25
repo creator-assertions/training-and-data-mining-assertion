@@ -19,3 +19,51 @@ include::partial$license.adoc[]
 :sectnums:
 
 == Introduction
+
+This assertion enables a human actor to provide a Manifest Consumer information about whether the asset may be used as part of a data mining or AI/ML training workflow.  This is expressed in the assertion through a map of one or more `training-mining-entries`.  Each entry describes whether its use is `allowed`, `notAllowed` or `constrained`. 
+
+There are four pre-defined entries:
+
+`c2pa.data_mining`:: 
+Can any text or data content be extracted from the asset for purposes of determining "patterns, trends and correlations".
++
+NOTE: This would include images containing text, where the text could be extracted via OCR.
+
+`c2pa.ai_inference`:: 
+Can the asset be used as input to a trained AI/ML model for the purposes of _inferring_ a result.
+
+`c2pa.ai_generative_training`:: 
+Can the asset be used as training data to an AI/ML model that could produce derivative assets.
+ 
+`c2pa.ai_training`:: 
+Can the asset be used as data to train non-generative AI/ML models, such as those used for classification, object detection, etc.
+
+[NOTE]
+====
+`c2pa.ai_generative_training` and `c2pa.ai_training` are separate values because generative AI training enables derivative assets to be created from training assets, while other types, such as object detection, do not.
+====
+
+In addition to the pre-defined entries, a claim generator may also add their own custom keys, provided that they conform to the same syntax as xref:_labels[custom labels].
+
+The value of `constrained` implies that permission is not unconditionally granted for this usage. Consumers of this content that wish to use the content in this way may wish to contact the actor which is the rights holder, author or signer to get more info or obtain permission.  In the absence of additional information, `constrained` shall be treated as equivalent to `notAllowed`. More details on the constraints may be provided in the `constraints_info` text field.  
+
+NOTE: Some possible things that could be put into `constraints_info` include a well-known description of a license (e.g., (https://creativecommons.org/)[Creative Commons]), a URL to a policy file, or just some free text.
+
+
+A training and data mining Assertion shall have a label of `c2pa.training-mining`.
+
+== Schema and Example
+
+The https://datatracker.ietf.org/doc/html/rfc8610[CDDL Definition] for this type is:
+
+[source,cddl]
+----
+include::../partials/schemas/cddl/training-mining.cddl[]
+----
+
+An example in CBOR Diagnostic Format (`.cbordiag`) is shown below:
+
+[source,json]
+----
+include::../partials/schemas/cddl/examples/training-mining.cbordiag[]
+----
