@@ -1,0 +1,14 @@
+# Use this playbook when building locally.
+
+site:
+  title: Training and Data Mining Assertion
+  start_page: training-and-data-mining::index.adoc
+content:
+  sources: 
+  - url: .
+    branches: HEAD
+    start_path: docs
+ui: 
+  bundle:
+    url: https://local--voluble-treacle-74ce0d.netlify.app/ui-bundle.zip
+    snapshot: true

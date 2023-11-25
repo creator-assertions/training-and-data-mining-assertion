@@ -1,0 +1,21 @@
+= Training and Data Mining Assertion
+:toc: macro
+:toc-title:
+:sectanchors:
+:sectnums!:
+
+Introductory text to follow
+
+*Preliminary draft 24 November 2023*
+
+*Editors:*
+
+* mailto:scouten@adobe.com[Eric Scouten] (https://adobe.com[Adobe])
+
+include::partial$toc.adoc[]
+include::partial$status.adoc[]
+include::partial$license.adoc[]
+
+:sectnums:
+
+== Introduction
