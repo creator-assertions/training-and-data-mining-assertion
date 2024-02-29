@@ -4,7 +4,9 @@
 :sectanchors:
 :sectnums:
 
-An training and data mining is a way of indicating approval for specific actions made on content after it has had a link:++https://c2pa.org/specifications/specifications/2.0/specs/C2PA_Specification.html#_manifests++[C2PA Manifest] attached. (See xref:_generating_an_training and data mining[xrefstyle=full].) The *training and data mining assertion* is where an training and data mining from the signer of an ingredient asset is stored. These training and data minings are typically provided (out-of-band of this specification) by ingredient asset signers to actors those signers trust to perform the actions listed in the assertion. They are used by a validator when assessing whether the actions of the active manifest are “endorsed” or not. (See xref:_validation[xrefstyle=full].)
+The *link:https://c2pa.org/specifications/specifications/2.0/specs/C2PA_Specification.html[C2PA technical specification]* allows actors in a workflow to make cryptographically signed assertions about the produced C2PA asset.
+
+The *training and data mining assertion* enables a human actor to provide a C2PA Manifest Consumer information about whether an asset with C2PA metadata may be used as part of a data mining or AI/ML training workflow.
 
 Version 1.0 *Pre-draft 28 February 2024* · xref:_version_history[]
 
@@ -26,41 +28,46 @@ _This section is non-normative._
 
 IMPORTANT: For purposes of the Community Specification License, the link:https://github.com/creator-assertions/training-and-data-mining-assertion/blob/main/scope.md[`scope.md` document] at the root of this project’s GitHub repository is the governing document of this specification’s scope.
 
+== Normative references
+
+* https://c2pa.org/specifications/specifications/2.0/specs/C2PA_Specification.html[C2PA technical specification, version 2.0]
+
+== Assertion definition
+
 === Overview
 
-This assertion enables a human actor to provide a Manifest Consumer information about whether the asset may be used as part of a data mining or AI/ML training workflow.  This is expressed in the assertion through a map of one or more `training-mining-entries`.  Each entry describes whether its use is `allowed`, `notAllowed` or `constrained`. 
+This assertion enables a human actor to provide a Manifest Consumer information about whether the asset may be used as part of a data mining or AI/ML training workflow. This is expressed in the assertion through a map of one or more `training-mining-entries`. Each entry describes whether its use is `allowed`, `notAllowed`, or `constrained`.
 
 There are four pre-defined entries:
 
-`c2pa.data_mining`:: 
-Can any text or data content be extracted from the asset for purposes of determining "patterns, trends and correlations".
+`cawg.data_mining`::
+Can any text or data content be extracted from the asset for purposes of determining “patterns, trends, and correlations.”
 +
 NOTE: This would include images containing text, where the text could be extracted via OCR.
 
-`c2pa.ai_inference`:: 
+`cawg.ai_inference`::
 Can the asset be used as input to a trained AI/ML model for the purposes of _inferring_ a result.
 
-`c2pa.ai_generative_training`:: 
+`cawg.ai_generative_training`::
 Can the asset be used as training data to an AI/ML model that could produce derivative assets.
- 
-`c2pa.ai_training`:: 
+
+`cawg.ai_training`::
 Can the asset be used as data to train non-generative AI/ML models, such as those used for classification, object detection, etc.
 
 [NOTE]
 ====
-`c2pa.ai_generative_training` and `c2pa.ai_training` are separate values because generative AI training enables derivative assets to be created from training assets, while other types, such as object detection, do not.
+`cawg.ai_generative_training` and `cawg.ai_training` are separate values because generative AI training enables derivative assets to be created from training assets, while other types, such as object detection, do not.
 ====
 
-In addition to the pre-defined entries, a claim generator may also add their own custom keys, provided that they conform to the same syntax as xref:_labels[custom labels].
+In addition to the pre-defined entries, a claim generator may also add their own custom keys, provided that they conform to the same syntax for _custom labels_ as defined in link:++https://c2pa.org/specifications/specifications/2.0/specs/C2PA_Specification.html#_labels++[Section 6.2, “Labels,” of the C2PA Technical Specification]. Labels beginning with the prefix `cawg.` are reserved for use in future versions of this specification and MUST NOT be assigned by any other claim generator.
 
-The value of `constrained` implies that permission is not unconditionally granted for this usage. Consumers of this content that wish to use the content in this way may wish to contact the actor which is the rights holder, author or signer to get more info or obtain permission.  In the absence of additional information, `constrained` shall be treated as equivalent to `notAllowed`. More details on the constraints may be provided in the `constraints_info` text field.  
+The value of `constrained` implies that permission is not unconditionally granted for this usage. Consumers of this content that wish to use the content in this way may wish to contact the actor which is the rights holder, author, or signer to get more info or obtain permission. In the absence of additional information, `constrained` shall be treated as equivalent to `notAllowed`. More details on the constraints may be provided in the `constraints_info` text field.
 
 NOTE: Some possible things that could be put into `constraints_info` include a well-known description of a license (e.g., (https://creativecommons.org/)[Creative Commons]), a URL to a policy file, or just some free text.
 
+A training and data mining assertion SHALL have a label of `cawg.training-mining`.
 
-A training and data mining Assertion shall have a label of `c2pa.training-mining`.
-
-== Schema and Example
+=== Schema and example
 
 The https://datatracker.ietf.org/doc/html/rfc8610[CDDL Definition] for this type is:
 
