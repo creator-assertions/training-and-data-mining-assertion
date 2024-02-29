@@ -1,13 +1,13 @@
 {
   "entries":
-	"c2pa.ai_training" : {
-		"use" : "allowed"
+	"c2pa.ai_training": {
+		"use": "allowed"
 	},
-	"c2pa.ai_generative_training" : {
-		"use" : "notAllowed"
+	"c2pa.ai_generative_training": {
+		"use": "notAllowed"
 	},
-	"c2pa.data_mining" : {
-		"use" : "constrained",
-		"constraint_info" : "may only be mined on days whose names end in 'y'"
+	"c2pa.data_mining": {
+		"use": "constrained",
+		"constraint_info": "may only be mined on days whose names end in 'y'"
 	}
 }

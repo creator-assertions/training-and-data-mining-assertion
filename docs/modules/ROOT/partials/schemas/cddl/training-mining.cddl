@@ -9,8 +9,8 @@ $training-mining-choice /=  "constrained"
 
 ; Description of the data structure
 training-mining-map-entry = {
-	"use" : $training-mining-choice,
-	? "constraint_info" : tstr .size (1..max-tstr-length) ; information about the use of `constrained`
+	"use": $training-mining-choice,
+	? "constraint_info": tstr .size (1..max-tstr-length) ; information about the use of `constrained`
 }
 
 training-mining-map = {
