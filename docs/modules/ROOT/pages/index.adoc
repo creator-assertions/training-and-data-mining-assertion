@@ -67,6 +67,16 @@ NOTE: Some possible things that could be put into `constraints_info` include a w
 
 A training and data mining assertion SHALL have a label of `cawg.training-mining`.
 
+[WARNING]
+.Notice to implementers of previous (C2PA 1.x) definition of this assertion
+====
+Implementers who are transitioning from the earlier definition of this assertion should pay special attention to label names.
+
+The link:++https://c2pa.org/specifications/specifications/1.4/specs/C2PA_Specification.html#_training_and_data_mining++[training and data mining assertion as defined in version 1.4 of the C2PA technical specification] used labels with the prefix `c2pa.` for the assertion itself and for the pre-defined `training-mining-map` entries.
+
+This specification is not a product of the C2PA itself, so it can not use the `c2pa.` prefix. Therefore, though structurally similar to the C2PA 1.x definition, the labels have been changed to `cawg.` in this specification.
+====
+
 === Schema and example
 
 The https://datatracker.ietf.org/doc/html/rfc8610[CDDL Definition] for this type is:
