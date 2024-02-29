@@ -2,23 +2,31 @@
 :toc: macro
 :toc-title:
 :sectanchors:
-:sectnums!:
+:sectnums:
 
-Introductory text to follow
+An training and data mining is a way of indicating approval for specific actions made on content after it has had a link:++https://c2pa.org/specifications/specifications/2.0/specs/C2PA_Specification.html#_manifests++[C2PA Manifest] attached. (See xref:_generating_an_training and data mining[xrefstyle=full].) The *training and data mining assertion* is where an training and data mining from the signer of an ingredient asset is stored. These training and data minings are typically provided (out-of-band of this specification) by ingredient asset signers to actors those signers trust to perform the actions listed in the assertion. They are used by a validator when assessing whether the actions of the active manifest are “endorsed” or not. (See xref:_validation[xrefstyle=full].)
 
-*Preliminary draft 24 November 2023*
+Version 1.0 *Pre-draft 28 February 2024* · xref:_version_history[]
 
-*Editors:*
+[#maintainers]
+*Maintainers:*
 
 * mailto:scouten@adobe.com[Eric Scouten] (https://adobe.com[Adobe])
 
-include::partial$toc.adoc[]
-include::partial$status.adoc[]
 include::partial$license.adoc[]
-
-:sectnums:
+include::partial$contributing.adoc[]
+include::partial$foreword.adoc[]
+include::partial$toc.adoc[]
 
 == Introduction
+
+_This section is non-normative._
+
+=== Scope
+
+IMPORTANT: For purposes of the Community Specification License, the link:https://github.com/creator-assertions/training-and-data-mining-assertion/blob/main/scope.md[`scope.md` document] at the root of this project’s GitHub repository is the governing document of this specification’s scope.
+
+=== Overview
 
 This assertion enables a human actor to provide a Manifest Consumer information about whether the asset may be used as part of a data mining or AI/ML training workflow.  This is expressed in the assertion through a map of one or more `training-mining-entries`.  Each entry describes whether its use is `allowed`, `notAllowed` or `constrained`. 
 
@@ -67,3 +75,5 @@ An example in CBOR Diagnostic Format (`.cbordiag`) is shown below:
 ----
 include::../partials/schemas/cddl/examples/training-mining.cbordiag[]
 ----
+
+include::partial$version-history.adoc[]

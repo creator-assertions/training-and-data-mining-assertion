@@ -1,0 +1,8 @@
+[appendix]
+== Version history
+
+_This section is non-normative._
+
+*28 February 2024*
+
+* Prepare 1.0-draft version, derived from final description of link:++https://c2pa.org/specifications/specifications/1.4/specs/C2PA_Specification.html#_training_and_data_mining++[training and data mining assertion in C2PA 1.4 Technical Specification].

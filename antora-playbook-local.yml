@@ -10,5 +10,11 @@ content:
     start_path: docs
 ui: 
   bundle:
-    url: https://local--voluble-treacle-74ce0d.netlify.app/ui-bundle.zip
+    url: https://creator-assertions.github.io/antora-ui/ui-bundle-local.zip
     snapshot: true
+antora:
+  extensions:
+    - require: '@sntke/antora-mermaid-extension'
+      mermaid_initialize_options:
+        theme_variables:
+          font_family: Roboto,sans-serif
