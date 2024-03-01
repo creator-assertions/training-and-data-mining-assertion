@@ -8,7 +8,7 @@ The *link:https://c2pa.org/specifications/specifications/2.0/specs/C2PA_Specific
 
 The *training and data mining assertion* enables a human actor to provide a C2PA Manifest Consumer information about whether an asset with C2PA metadata may be used as part of a data mining or AI/ML training workflow.
 
-Version 1.0 *Pre-draft 29 February 2024* · xref:_version_history[]
+Version 1.0 *Pre-draft 01 March 2024* · xref:_version_history[]
 
 [#maintainers]
 *Maintainers:*
@@ -49,14 +49,14 @@ NOTE: This would include images containing text, where the text could be extract
 Can the asset be used as input to a trained AI/ML model for the purposes of _inferring_ a result.
 
 `cawg.ai_generative_training`::
-Can the asset be used as training data to an AI/ML model that could produce derivative assets.
+Can the asset be used as training data to an AI/ML model that could generate assets.
 
 `cawg.ai_training`::
 Can the asset be used as data to train non-generative AI/ML models, such as those used for classification, object detection, etc.
 
 [NOTE]
 ====
-`cawg.ai_generative_training` and `cawg.ai_training` are separate values because generative AI training enables derivative assets to be created from training assets, while other types, such as object detection, do not.
+`cawg.ai_generative_training` and `cawg.ai_training` are separate values because generative AI training enables new assets to be created from training assets, while other types, such as object detection, do not.
 ====
 
 In addition to the pre-defined entries, a claim generator may also add their own custom keys, provided that they conform to the same syntax for _custom labels_ as defined in link:++https://c2pa.org/specifications/specifications/2.0/specs/C2PA_Specification.html#_labels++[Section 6.2, “Labels,” of the C2PA Technical Specification]. Labels beginning with the prefix `cawg.` are reserved for use in future versions of this specification and MUST NOT be assigned by any other claim generator.

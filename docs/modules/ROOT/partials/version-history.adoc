@@ -11,3 +11,8 @@ _This section is non-normative._
 
 * Add warning about labels changing since the C2PA 1.4 definition of this assertion.
 * Minor formatting tweaks.
+
+*01 March 2024*
+
+* Minor wording changes.
+* Fix lingering `c2pa.` prefixes in CDDL description and CBOR-Diag example.
