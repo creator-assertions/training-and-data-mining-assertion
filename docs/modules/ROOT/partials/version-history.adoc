@@ -16,3 +16,7 @@ _This section is non-normative._
 
 * Minor wording changes.
 * Fix lingering `c2pa.` prefixes in CDDL description and CBOR-Diag example.
+
+*04 March 2024*
+
+* Promoted from pre-draft to draft status.
