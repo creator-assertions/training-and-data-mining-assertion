@@ -20,3 +20,7 @@ _This section is non-normative._
 *04 March 2024*
 
 * Promoted from pre-draft to draft status.
+
+*18 March 2024*
+
+* Approved 1.0 version of this specification.
