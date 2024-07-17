@@ -3,24 +3,6 @@
 
 _This section is non-normative._
 
-*28 February 2024*
+*17 July 2024*
 
-* Prepare 1.0-draft version, derived from final description of link:++https://c2pa.org/specifications/specifications/1.4/specs/C2PA_Specification.html#_training_and_data_mining++[training and data mining assertion in C2PA 1.4 Technical Specification].
-
-*29 February 2024*
-
-* Add warning about labels changing since the C2PA 1.4 definition of this assertion.
-* Minor formatting tweaks.
-
-*01 March 2024*
-
-* Minor wording changes.
-* Fix lingering `c2pa.` prefixes in CDDL description and CBOR-Diag example.
-
-*04 March 2024*
-
-* Promoted from pre-draft to draft status.
-
-*18 March 2024*
-
-* Approved 1.0 version of this specification.
+* Started 1.1 pre-draft version of this specification, derived from the xref:1.0@training-and-data-mining:ROOT:index.adoc[1.0 version of this specification]. (xref:1.0@training-and-data-mining:ROOT:index.adoc#_version_history[Version history])
