@@ -6,3 +6,7 @@ _This section is non-normative._
 *17 July 2024*
 
 * Started 1.1 pre-draft version of this specification, derived from the xref:1.0@training-and-data-mining:ROOT:index.adoc[1.0 version of this specification]. (xref:1.0@training-and-data-mining:ROOT:index.adoc#_version_history[Version history])
+
+*22 July 2024*
+
+* Promoted from pre-draft to draft status.
