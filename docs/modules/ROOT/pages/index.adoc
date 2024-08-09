@@ -40,7 +40,7 @@ IMPORTANT: For purposes of the Community Specification License, the link:https:/
 
 This assertion enables a human actor to provide a Manifest Consumer information about whether the asset may be used as part of a data mining or AI/ML training workflow. This is expressed in the assertion through a map of one or more `training-mining-entries`. Each entry describes whether its use is `allowed`, `notAllowed`, or `constrained`.
 
-There are four pre-defined entries:
+There are five pre-defined entries:
 
 `cawg.data_mining`::
 Can any text or data content be extracted from the asset for purposes of determining “patterns, trends, and correlations.”
@@ -60,6 +60,12 @@ Can the asset be used as data to train non-generative AI/ML models, such as thos
 ====
 `cawg.ai_generative_training` and `cawg.ai_training` are separate values because generative AI training enables new assets to be created from training assets, while other types, such as object detection, do not.
 ====
+
+`cawg.social_media`::
+Can the asset be shared on social media platforms, groups, and messenger services. For this entry, the meaning of the possible values is defined as follows:
+- `allowed`: The distribution of this asset is not limited in any way. It may be shared and/or distributed in any other way on all social media platforms, in all groups, messenger services, websites, etc. without any restrictions.
+- `notAllowed`: The distribution of this asset is explicitly not allowed. It may not be shared and/or distributed in any other way on any social media platform, messenger service, website, etc. Social media platforms, websites, messenger services, etc. should automatically and instantly reject the upload of any such asset. 
+- `constrained`: The distribution of this asset is restricted to a private scope. It may only be shared and/or distributed on private profiles and/or private groups on social media platforms, private websites, and/or private messenger groups. It may not be shared and/or distributed in any way that allows for public access. Social media platforms, websites, messenger services, etc. should automatically and instantly reject sharing such an asset outside the defined private scope.
 
 In addition to the pre-defined entries, a claim generator may also add their own custom keys, provided that they conform to the same syntax for _custom labels_ as defined in link:++https://c2pa.org/specifications/specifications/2.0/specs/C2PA_Specification.html#_labels++[Section 6.2, “Labels,” of the C2PA Technical Specification]. Labels beginning with the prefix `cawg.` are reserved for use in future versions of this specification and MUST NOT be assigned by any other claim generator.
 

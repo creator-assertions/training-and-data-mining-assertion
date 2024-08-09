@@ -17,7 +17,8 @@ training-mining-map = {
 	? "cawg.data_mining"				: $training-mining-map-entry,		
 	? "cawg.ai_inference"				: $training-mining-map-entry,		
 	? "cawg.ai_training"				: $training-mining-map-entry,		
-	? "cawg.ai_generative_training"  	: $training-mining-map-entry,
+	? "cawg.ai_generative_training"		: $training-mining-map-entry,
+	? "cawg.social_media"				: $training-mining-map-entry,
 	* tstr => any	; allow for any other custom use case
 	? "metadata": $assertion-metadata-map    	; additional information about the assertion
 }
