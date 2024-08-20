@@ -1,13 +1,11 @@
 {
-  "entries":
-	"cawg.ai_training": {
-		"use": "allowed"
-	},
-	"cawg.ai_generative_training": {
-		"use": "notAllowed"
-	},
-	"cawg.data_mining": {
-		"use": "constrained",
-		"constraint_info": "may only be mined on days whose names end in 'y'"
-	}
+"cawg.ai_training": {
+	"use": "allowed"
+},
+"cawg.ai_generative_training": {
+	"use": "notAllowed"
+},
+"cawg.data_mining": {
+	"use": "constrained",
+	"constraint_info": "may only be mined on days whose names end in 'y'"
 }
