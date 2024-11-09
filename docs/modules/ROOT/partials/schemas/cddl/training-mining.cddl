@@ -1,23 +1,26 @@
 ; Assertion for specifying whether the associated asset and its data
 ; may be used for training an AI/ML model or mined for its data (or both).
 
-
 ; Possible values
-$training-mining-choice /=  "allowed"
-$training-mining-choice /=  "notAllowed"
-$training-mining-choice /=  "constrained"
+$training-mining-choice /= "allowed"
+$training-mining-choice /= "notAllowed"
+$training-mining-choice /= "constrained"
 
 ; Description of the data structure
-training-mining-map-entry = {
-	"use": $training-mining-choice,
-	? "constraint_info": tstr .size (1..max-tstr-length) ; information about the use of `constrained`
+training-mining-map = {
+    "entries"    : $training-mining-entries-map
+    ? "metadata" : $assertion-metadata-map ; additional information about the assertion
 }
 
-training-mining-map = {
-	? "cawg.data_mining"				: $training-mining-map-entry,		
-	? "cawg.ai_inference"				: $training-mining-map-entry,		
-	? "cawg.ai_training"				: $training-mining-map-entry,		
-	? "cawg.ai_generative_training"  	: $training-mining-map-entry,
-	* tstr => any	; allow for any other custom use case
-	? "metadata": $assertion-metadata-map    	; additional information about the assertion
+training-mining-entries-map = {
+    ? "cawg.data_mining"            : $training-mining-map-entry,       
+    ? "cawg.ai_inference"           : $training-mining-map-entry,       
+    ? "cawg.ai_training"            : $training-mining-map-entry,       
+    ? "cawg.ai_generative_training" : $training-mining-map-entry,
+    * tstr => any ; allow for any other custom use case
+}
+
+training-mining-map-entry = {
+    "use": $training-mining-choice,
+    ? "constraint_info": tstr .size (1..max-tstr-length) ; information about the use of `constrained`
 }

@@ -88,6 +88,8 @@ The https://datatracker.ietf.org/doc/html/rfc8610[CDDL Definition] for this type
 include::../partials/schemas/cddl/training-mining.cddl[]
 ----
 
+IMPORTANT: A previous version of this specification inadvertently omitted the `entries` map from the CDDL definition. It SHOULD be used as documented in this version.
+
 An example in CBOR Diagnostic Format (`.cbordiag`) is shown below:
 
 [source,json]
