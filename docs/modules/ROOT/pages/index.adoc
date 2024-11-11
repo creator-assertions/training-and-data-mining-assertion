@@ -8,7 +8,7 @@ The *link:https://c2pa.org/specifications/specifications/2.0/specs/C2PA_Specific
 
 The *training and data mining assertion* enables a human actor to provide a C2PA Manifest Consumer information about whether an asset with C2PA metadata may be used as part of a data mining or AI/ML training workflow.
 
-*Version 1.1 Draft 22 July 2024* · xref:_version_history[]
+*Version 1.1 Draft 11 November 2024* · xref:_version_history[]
 
 IMPORTANT: The Creator Assertions Working Group expects to release an update to this specification late in 2024. This page is the working draft of that update. Until that time, implementers should refer to the xref:1.0@training-and-data-mining:ROOT:index.adoc[1.0 version of this specification].
 
@@ -87,6 +87,8 @@ The https://datatracker.ietf.org/doc/html/rfc8610[CDDL Definition] for this type
 ----
 include::../partials/schemas/cddl/training-mining.cddl[]
 ----
+
+IMPORTANT: A previous version of this specification inadvertently omitted the `entries` map from the CDDL definition. It SHOULD be used as documented in this version.
 
 An example in CBOR Diagnostic Format (`.cbordiag`) is shown below:
 
